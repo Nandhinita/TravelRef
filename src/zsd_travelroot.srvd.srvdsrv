@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSD_TRAVELROOT {
+  expose ZC_TravelRoot;
+}

@@ -1,0 +1,61 @@
+@Metadata.layer: #CORE
+@UI:{
+headerInfo:
+{
+typeName: 'Travel',
+typeNamePlural: 'Travels',
+title:
+{
+type: #STANDARD,
+label: 'Travel',
+value: 'Travelid'
+}
+}
+}
+annotate view ZC_TravelRoot with
+{
+@UI.facet: 
+[ { 
+id:'TravelHeaer', 
+purpose:#STANDARD, 
+type: #IDENTIFICATION_REFERENCE, 
+label: 'Travel', 
+position: 10 
+} ] 
+@UI.hidden: true 
+
+CurrencyCode;
+  @UI: 
+  { lineItem: [ { position: 10 } ], 
+  identification: [ { position: 10 } ], 
+  selectionField: [ { position: 10 } ] }
+  Travelid;
+  
+   @UI: 
+  { lineItem: [ { position: 20 } ], 
+  identification: [ { position: 20 } ]}
+  Description;
+
+   @UI: 
+  { lineItem: [ { position: 30 } ], 
+  identification: [ { position: 30 } ] }
+  TotalPrice;
+  
+     @UI: 
+  { lineItem: [ { position: 40 } ], 
+  identification: [ { position: 40 } ],
+   selectionField: [ { position: 40 } ]}
+  Status;
+
+     @UI: 
+  { lineItem: [ { position: 50 } ], 
+  identification: [ { position: 50 } ]
+   }
+
+  StatusText;
+  
+     @UI: 
+  { lineItem: [ { position: 60 } ], 
+  identification: [ { position: 60 } ] }
+  TotalPriceWithCurrency;
+}

@@ -1,0 +1,22 @@
+managed implementation in class zbp_i_travelroot unique;
+strict ( 2 );
+
+define behavior for ZI_TRAVELROOT alias travel
+persistent table ztravel_root
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Travelid;
+
+  mapping for ztravel_root
+  {
+
+ Travelid = travelid;
+
+
+ }
+}
