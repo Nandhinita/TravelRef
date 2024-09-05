@@ -20,7 +20,14 @@ on $projection.Status = _Status.OverallStatus
     total_price as TotalPrice,
     currency_code as CurrencyCode,
     status as Status,
+    @EndUserText.label: 'Total Price With Currency'
     concat_with_space(cast(total_price as abap.char(20)), currency_code, 2) as TotalPriceWithCurrency,
     _Status._Text.Text as StatusText,
+    case status
+    when 'A' then 3
+    when 'O' then 2
+    when 'X' then 1
+    else 0
+    end as StatusCriticality,
     _Status
 }

@@ -25,6 +25,7 @@ element: 'OverallStatus' } }]
            @Consumption.valueHelpDefinition: [{ label: 'Status Text', entity : {name: '/DMO/I_Overall_Status_VH',
 element: 'OverallStatus' } }]
     StatusText,
+    StatusCriticality,
     /* Associations */
     _Status
 }
